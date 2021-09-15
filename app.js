@@ -69,7 +69,7 @@ sequelize.sync()
     
     .then(cart=>{
         // console.log(cart);
-        app.listen(4000);
+        app.listen(3000);
     })
     .catch(err=>{
         console.log(err);
