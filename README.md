@@ -1,6 +1,6 @@
-# E-commerce Cart
+# E-Commerce cart
 
-In our application, users can buy/sell products. To buy, a user adds items to his/her cart, pays online, and views his/her invoices. To sell a product, s/he adds its title, image, price, and short description.
+In our app, users can buy/sell products. To buy, a user adds items to his/her cart, pays online, and views his/her invoices. To sell a product, s/he adds its title, image, price, and short description.
 
 
 ## Design
@@ -20,3 +20,23 @@ In our application, users can buy/sell products. To buy, a user adds items to hi
 ## Demo
 ![Alt Text](Demo.gif)
 
+
+## Run
+- In the app's root directory, create two folders: data/invoices and images.
+
+- For MongoDB access, replace \<username\> and \<password\> at line 18 in app.js with yours:
+
+      const MONGODB_URI = 'mongodb+srv://<username>:<password>@cluster0-rbjdo.mongodb.net/shop';
+
+- For stripe's payment, replace both test API keys:  publishable key in views/shop/checkout.ejs at line 23 and secret key in controllers/shop.js at line 5.
+
+- Replace SendGrid's API key in controllers/auth.js at line 12.
+
+- Navigate to the app's root directory at the terminal and run the following commands:
+
+      npm install
+      npm start
+
+- In your browser, visit:
+
+      http://localhost:3000/
